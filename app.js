@@ -18,16 +18,16 @@ app.post('/submit-form', async (req, res) => {
       host: 'smtp.elasticemail.com',
       secure: true,
       auth: {
-        user: 'shahid.gdsdev@gmail.com',
-        pass: '9834B6F8C633956210B89A2AAF53423EC7BB',
+        user: 'email@americanwebcraft.com',
+        pass: '259D56DCCB0B48789952B072ADCE6CE45922',
       },
     });
 
     // Email content
     const mailOptions = {
-      from: 'shahid.gdsdev@gmail.com',
-      to: 'shahid.gdsdev@gmail.com',
-      subject: 'New Contact Form Submission',
+      from: 'email@americanwebcraft.com',
+      to: 'info@americanwebcraft.com',
+      subject: 'Hire Us || Contact Form',
       html: `
         <p>Name: ${name}</p>
         <p>Company: ${company}</p>

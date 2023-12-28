@@ -31,7 +31,7 @@ app.post('/submit-form', async (req, res) => {
       html: `
         <p>Name: ${name}</p>
         <p>Email: ${email}</p>
-        <p>Company Size: ${phone}</p>
+        <p>Phone Number: ${phone}</p>
         <p>Company: ${company}</p>
         <p>Message: ${message}</p>
       `,

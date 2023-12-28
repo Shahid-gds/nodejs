@@ -32,7 +32,7 @@ app.post('/submit-form', async (req, res) => {
         <p>Name: ${name}</p>
         <p>Email: ${email}</p>
         <p>Phone Number: ${phone}</p>
-        <p>Company: ${company}</p>
+        <p>Company Name: ${company}</p>
         <p>Message: ${message}</p>
       `,
     };

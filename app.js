@@ -662,8 +662,8 @@ app.post("/contact-us", async (req, res) => {
         <p>Email: ${email}</p>
         <p>Phone Number: ${phone}</p>
         <p>Company Name: ${company}</p>
-        <p>Company Name: ${size}</p>
-        <p>Company Name: ${services}</p>
+        <p>Company Size: ${size}</p>
+        <p>Type of Services: ${services}</p>
         <p>Message: ${message}</p>
       `,
     };

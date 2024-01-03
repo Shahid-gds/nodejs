@@ -50,77 +50,146 @@ app.post("/submit-form", async (req, res) => {
       html: `
       <html>
       <head>
-        <style>
-          .card {
-            border: 0px solid #9d0208;
-            max-width: 400px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            background: linear-gradient(to top, #601417, #9d0208);
-          }
-          .header {
-              background: #161617;
-              text-align: center;
-              color: #fff;
-              padding: 15px;
-              font-size: 20px;
-            }
-          .dear {
-            color: #fff;
-            padding-right: 20px;
-            padding-left: 20px;
-            margin-top: 20px;
-            font-size: 22px;
-          }
-          .name {
-            color: #fff;
-            padding-right: 20px;
-            padding-left: 20px;
-            font-size: 20px;
-          }
+      <style>
+      .card {
+          border: 2px solid #9b1d21;
+          max-width: 500px;
+          background-color: #fff;
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          text-align: center;
+      }
 
-          h2 {
-            color: #fff;
-            padding-right: 20px;
-            padding-left: 20px;
-            text-align:right;
-          }
+      .header,
+      .footer {
+          display: flex;
+      }
 
-          p {
-            line-height: 1.6;
-            padding-right: 20px;
-            padding-left: 20px;
-            font-size: 17px;
-            color: #fff;
-          }
+      .first,
+      .last {
+          width: 100%;
+      }
 
-          .footer {
-            background: #161617;
-            padding: 10px;
-            margin-top: 20px;
-            text-align: center;
-            color: #fff;
-            font-size: 16px;
-          }
-        </style>
+      .middle {
+          width: 250px;
+          height: 20px;
+          background: #9b1d21;
+      }
+
+      .content {
+          padding: 25px;
+      }
+
+      .logo {
+          margin: 2rem 0 2rem 0rem;
+      }
+
+      .greeting {
+          font-size: 46px;
+          color: #9b1d21;
+          font-weight: bold;
+      }
+
+      .from {
+          font-size: 46px;
+          color: #000000;
+          font-weight: bold;
+      }
+
+      .web-crafts {
+          font-size: 25px;
+          color: #000000;
+          font-weight: bold;
+      }
+
+      .middle-line-div {
+          display: flex;
+      }
+
+      .middle-line {
+          width: 350px;
+          height: 8px;
+          background: #9b1d21;
+          margin: 1.5rem 0 1.5rem 0;
+      }
+      .dear {
+          color: #b95857;
+          font-size: 22px;
+          font-weight: bold;
+      }
+
+      .name {
+          color: #424242;
+          font-size: 22px;
+          font-weight: bold;
+      }
+
+      p {
+          color: #555555;
+          font-size: 18px;
+      }
+
+      h2 {
+          font-size: 25px;
+          color: #9d0208;
+          font-weight: bold;
+      }
+
+      .best-regards {
+          color: #2f2f2f;
+          font-size: 20px;
+          font-weight: bold;
+      }
+
+      .footer-middle {
+          width: 250px;
+          height: 50px;
+          display: flex;
+          justify-content: center;
+          background: #9b1d21;
+      }
+  </style>
       </head>
       <body>
       <div class="card">
-      <div class="back_bg"></div>
-      <div class="header">Greeting from American Web Crafts</div>
-        <div class="dear">Dear,</div>
-        <div class="name">${name}</div>
-        <p>
-        Rest assured that a highly dedicated and experienced representative from our team is committed to reaching out to you shortly, 
-        utilizing either your provided phone number or email address, and will diligently ensure that you receive the prompt and 
-        personalized assistance you deserve.
-        </p>
-        <h2>Thank You 😇</h2>
-        <div class="footer">
-          <p>Best regards,<br>American Web Crafts</p>
-        </div>
+      <div class="header">
+          <div class="first"></div>
+          <div class="middle"></div>
+          <div class="last"></div>
       </div>
+      <div class="content">
+          <div class="logo"></div>
+          <div class="greeting-from">
+              <span class="greeting">Greeting</span>
+              <span class="from">From</span> <br>
+              <span class="web-crafts">American Web Crafts</span>
+          </div>
+          <div class="middle-line-div">
+              <div class="first"></div>
+              <div class="middle-line"></div>
+              <div class="last"></div>
+          </div>
+          <div class="">
+              <span class="dear">Dear,</span> <span class="name">${name}</span>
+          </div>
+          <p>
+              Rest assured that a highly dedicated and experienced representative from our team is committed to
+              reaching out to you shortly,
+              utilizing either your provided phone number or email address, and will diligently ensure that you
+              receive the prompt and
+              personalized assistance you deserve.
+          </p>
+          <h2>Thank You</h2>
+          <div class="best-regards">
+              <sapn>Best regards,<br>American Web Crafts</sapn>
+          </div>
+      </div>
+      <div class="footer">
+          <div class="first"></div>
+          <div class="footer-middle"></div>
+          <div class="last"></div>
+      </div>
+  </div>
       </body>
     </html>
     `,
@@ -175,77 +244,146 @@ app.post("/get-in", async (req, res) => {
       html: `
       <html>
       <head>
-        <style>
-          .card {
-            border: 0px solid #9d0208;
-            max-width: 400px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            background: linear-gradient(to top, #601417, #9d0208);
-          }
-          .header {
-              background: #161617;
-              text-align: center;
-              color: #fff;
-              padding: 15px;
-              font-size: 20px;
-            }
-          .dear {
-            color: #fff;
-            padding-right: 20px;
-            padding-left: 20px;
-            margin-top: 20px;
-            font-size: 22px;
-          }
-          .name {
-            color: #fff;
-            padding-right: 20px;
-            padding-left: 20px;
-            font-size: 20px;
-          }
+      <style>
+      .card {
+          border: 2px solid #9b1d21;
+          max-width: 500px;
+          background-color: #fff;
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          text-align: center;
+      }
 
-          h2 {
-            color: #fff;
-            padding-right: 20px;
-            padding-left: 20px;
-            text-align:right;
-          }
+      .header,
+      .footer {
+          display: flex;
+      }
 
-          p {
-            line-height: 1.6;
-            padding-right: 20px;
-            padding-left: 20px;
-            font-size: 17px;
-            color: #fff;
-          }
+      .first,
+      .last {
+          width: 100%;
+      }
 
-          .footer {
-            background: #161617;
-            padding: 10px;
-            margin-top: 20px;
-            text-align: center;
-            color: #fff;
-            font-size: 16px;
-          }
-        </style>
+      .middle {
+          width: 250px;
+          height: 20px;
+          background: #9b1d21;
+      }
+
+      .content {
+          padding: 25px;
+      }
+
+      .logo {
+          margin: 2rem 0 2rem 0rem;
+      }
+
+      .greeting {
+          font-size: 46px;
+          color: #9b1d21;
+          font-weight: bold;
+      }
+
+      .from {
+          font-size: 46px;
+          color: #000000;
+          font-weight: bold;
+      }
+
+      .web-crafts {
+          font-size: 25px;
+          color: #000000;
+          font-weight: bold;
+      }
+
+      .middle-line-div {
+          display: flex;
+      }
+
+      .middle-line {
+          width: 350px;
+          height: 8px;
+          background: #9b1d21;
+          margin: 1.5rem 0 1.5rem 0;
+      }
+      .dear {
+          color: #b95857;
+          font-size: 22px;
+          font-weight: bold;
+      }
+
+      .name {
+          color: #424242;
+          font-size: 22px;
+          font-weight: bold;
+      }
+
+      p {
+          color: #555555;
+          font-size: 18px;
+      }
+
+      h2 {
+          font-size: 25px;
+          color: #9d0208;
+          font-weight: bold;
+      }
+
+      .best-regards {
+          color: #2f2f2f;
+          font-size: 20px;
+          font-weight: bold;
+      }
+
+      .footer-middle {
+          width: 250px;
+          height: 50px;
+          display: flex;
+          justify-content: center;
+          background: #9b1d21;
+      }
+  </style>
       </head>
       <body>
       <div class="card">
-      <div class="back_bg"></div>
-      <div class="header">Greeting from American Web Crafts</div>
-        <div class="dear">Dear,</div>
-        <div class="name">${name}</div>
-        <p>
-        Rest assured that a highly dedicated and experienced representative from our team is committed to reaching out to you shortly, 
-        utilizing either your provided phone number or email address, and will diligently ensure that you receive the prompt and 
-        personalized assistance you deserve.
-        </p>
-        <h2>Thank You 😇</h2>
-        <div class="footer">
-          <p>Best regards,<br>American Web Crafts</p>
-        </div>
+      <div class="header">
+          <div class="first"></div>
+          <div class="middle"></div>
+          <div class="last"></div>
       </div>
+      <div class="content">
+          <div class="logo"></div>
+          <div class="greeting-from">
+              <span class="greeting">Greeting</span>
+              <span class="from">From</span> <br>
+              <span class="web-crafts">American Web Crafts</span>
+          </div>
+          <div class="middle-line-div">
+              <div class="first"></div>
+              <div class="middle-line"></div>
+              <div class="last"></div>
+          </div>
+          <div class="">
+              <span class="dear">Dear,</span> <span class="name">${name}</span>
+          </div>
+          <p>
+              Rest assured that a highly dedicated and experienced representative from our team is committed to
+              reaching out to you shortly,
+              utilizing either your provided phone number or email address, and will diligently ensure that you
+              receive the prompt and
+              personalized assistance you deserve.
+          </p>
+          <h2>Thank You</h2>
+          <div class="best-regards">
+              <sapn>Best regards,<br>American Web Crafts</sapn>
+          </div>
+      </div>
+      <div class="footer">
+          <div class="first"></div>
+          <div class="footer-middle"></div>
+          <div class="last"></div>
+      </div>
+  </div>
       </body>
     </html>
     `,
@@ -301,77 +439,146 @@ app.post("/get-started", async (req, res) => {
       html: `
       <html>
       <head>
-        <style>
-          .card {
-            border: 0px solid #9d0208;
-            max-width: 400px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            background: linear-gradient(to top, #601417, #9d0208);
-          }
-          .header {
-              background: #161617;
-              text-align: center;
-              color: #fff;
-              padding: 15px;
-              font-size: 20px;
-            }
-          .dear {
-            color: #fff;
-            padding-right: 20px;
-            padding-left: 20px;
-            margin-top: 20px;
-            font-size: 22px;
-          }
-          .name {
-            color: #fff;
-            padding-right: 20px;
-            padding-left: 20px;
-            font-size: 20px;
-          }
+      <style>
+      .card {
+          border: 2px solid #9b1d21;
+          max-width: 500px;
+          background-color: #fff;
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          text-align: center;
+      }
 
-          h2 {
-            color: #fff;
-            padding-right: 20px;
-            padding-left: 20px;
-            text-align:right;
-          }
+      .header,
+      .footer {
+          display: flex;
+      }
 
-          p {
-            line-height: 1.6;
-            padding-right: 20px;
-            padding-left: 20px;
-            font-size: 17px;
-            color: #fff;
-          }
+      .first,
+      .last {
+          width: 100%;
+      }
 
-          .footer {
-            background: #161617;
-            padding: 10px;
-            margin-top: 20px;
-            text-align: center;
-            color: #fff;
-            font-size: 16px;
-          }
-        </style>
+      .middle {
+          width: 250px;
+          height: 20px;
+          background: #9b1d21;
+      }
+
+      .content {
+          padding: 25px;
+      }
+
+      .logo {
+          margin: 2rem 0 2rem 0rem;
+      }
+
+      .greeting {
+          font-size: 46px;
+          color: #9b1d21;
+          font-weight: bold;
+      }
+
+      .from {
+          font-size: 46px;
+          color: #000000;
+          font-weight: bold;
+      }
+
+      .web-crafts {
+          font-size: 25px;
+          color: #000000;
+          font-weight: bold;
+      }
+
+      .middle-line-div {
+          display: flex;
+      }
+
+      .middle-line {
+          width: 350px;
+          height: 8px;
+          background: #9b1d21;
+          margin: 1.5rem 0 1.5rem 0;
+      }
+      .dear {
+          color: #b95857;
+          font-size: 22px;
+          font-weight: bold;
+      }
+
+      .name {
+          color: #424242;
+          font-size: 22px;
+          font-weight: bold;
+      }
+
+      p {
+          color: #555555;
+          font-size: 18px;
+      }
+
+      h2 {
+          font-size: 25px;
+          color: #9d0208;
+          font-weight: bold;
+      }
+
+      .best-regards {
+          color: #2f2f2f;
+          font-size: 20px;
+          font-weight: bold;
+      }
+
+      .footer-middle {
+          width: 250px;
+          height: 50px;
+          display: flex;
+          justify-content: center;
+          background: #9b1d21;
+      }
+  </style>
       </head>
       <body>
       <div class="card">
-      <div class="back_bg"></div>
-      <div class="header">Greeting from American Web Crafts</div>
-        <div class="dear">Dear,</div>
-        <div class="name">${name}</div>
-        <p>
-        Rest assured that a highly dedicated and experienced representative from our team is committed to reaching out to you shortly, 
-        utilizing either your provided phone number or email address, and will diligently ensure that you receive the prompt and 
-        personalized assistance you deserve.
-        </p>
-        <h2>Thank You 😇</h2>
-        <div class="footer">
-          <p>Best regards,<br>American Web Crafts</p>
-        </div>
+      <div class="header">
+          <div class="first"></div>
+          <div class="middle"></div>
+          <div class="last"></div>
       </div>
+      <div class="content">
+          <div class="logo"></div>
+          <div class="greeting-from">
+              <span class="greeting">Greeting</span>
+              <span class="from">From</span> <br>
+              <span class="web-crafts">American Web Crafts</span>
+          </div>
+          <div class="middle-line-div">
+              <div class="first"></div>
+              <div class="middle-line"></div>
+              <div class="last"></div>
+          </div>
+          <div class="">
+              <span class="dear">Dear,</span> <span class="name">${name}</span>
+          </div>
+          <p>
+              Rest assured that a highly dedicated and experienced representative from our team is committed to
+              reaching out to you shortly,
+              utilizing either your provided phone number or email address, and will diligently ensure that you
+              receive the prompt and
+              personalized assistance you deserve.
+          </p>
+          <h2>Thank You</h2>
+          <div class="best-regards">
+              <sapn>Best regards,<br>American Web Crafts</sapn>
+          </div>
+      </div>
+      <div class="footer">
+          <div class="first"></div>
+          <div class="footer-middle"></div>
+          <div class="last"></div>
+      </div>
+  </div>
       </body>
     </html>
     `,
@@ -426,80 +633,149 @@ app.post("/order-now", async (req, res) => {
       subject: "Thank You for Contacting American Web Crafts",
       html: `
       <html>
-        <head>
-          <style>
-            .card {
-              border: 0px solid #9d0208;
-              max-width: 400px;
-              background-color: #fff;
-              border-radius: 8px;
-              box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-              background: linear-gradient(to top, #601417, #9d0208);
-            }
-            .header {
-                background: #161617;
-                text-align: center;
-                color: #fff;
-                padding: 15px;
-                font-size: 20px;
-              }
-            .dear {
-              color: #fff;
-              padding-right: 20px;
-              padding-left: 20px;
-              margin-top: 20px;
-              font-size: 22px;
-            }
-            .name {
-              color: #fff;
-              padding-right: 20px;
-              padding-left: 20px;
-              font-size: 20px;
-            }
-  
-            h2 {
-              color: #fff;
-              padding-right: 20px;
-              padding-left: 20px;
-              text-align:right;
-            }
-  
-            p {
-              line-height: 1.6;
-              padding-right: 20px;
-              padding-left: 20px;
-              font-size: 17px;
-              color: #fff;
-            }
-  
-            .footer {
-              background: #161617;
-              padding: 10px;
-              margin-top: 20px;
-              text-align: center;
-              color: #fff;
-              font-size: 16px;
-            }
-          </style>
-        </head>
-        <body>
-        <div class="card">
-        <div class="back_bg"></div>
-        <div class="header">Greeting from American Web Crafts</div>
-          <div class="dear">Dear,</div>
-          <div class="name">${name}</div>
-          <p>
-          Rest assured that a highly dedicated and experienced representative from our team is committed to reaching out to you shortly, 
-          utilizing either your provided phone number or email address, and will diligently ensure that you receive the prompt and 
-          personalized assistance you deserve.
-          </p>
-          <h2>Thank You 😇</h2>
-          <div class="footer">
-            <p>Best regards,<br>American Web Crafts</p>
+      <head>
+      <style>
+      .card {
+          border: 2px solid #9b1d21;
+          max-width: 500px;
+          background-color: #fff;
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          text-align: center;
+      }
+
+      .header,
+      .footer {
+          display: flex;
+      }
+
+      .first,
+      .last {
+          width: 100%;
+      }
+
+      .middle {
+          width: 250px;
+          height: 20px;
+          background: #9b1d21;
+      }
+
+      .content {
+          padding: 25px;
+      }
+
+      .logo {
+          margin: 2rem 0 2rem 0rem;
+      }
+
+      .greeting {
+          font-size: 46px;
+          color: #9b1d21;
+          font-weight: bold;
+      }
+
+      .from {
+          font-size: 46px;
+          color: #000000;
+          font-weight: bold;
+      }
+
+      .web-crafts {
+          font-size: 25px;
+          color: #000000;
+          font-weight: bold;
+      }
+
+      .middle-line-div {
+          display: flex;
+      }
+
+      .middle-line {
+          width: 350px;
+          height: 8px;
+          background: #9b1d21;
+          margin: 1.5rem 0 1.5rem 0;
+      }
+      .dear {
+          color: #b95857;
+          font-size: 22px;
+          font-weight: bold;
+      }
+
+      .name {
+          color: #424242;
+          font-size: 22px;
+          font-weight: bold;
+      }
+
+      p {
+          color: #555555;
+          font-size: 18px;
+      }
+
+      h2 {
+          font-size: 25px;
+          color: #9d0208;
+          font-weight: bold;
+      }
+
+      .best-regards {
+          color: #2f2f2f;
+          font-size: 20px;
+          font-weight: bold;
+      }
+
+      .footer-middle {
+          width: 250px;
+          height: 50px;
+          display: flex;
+          justify-content: center;
+          background: #9b1d21;
+      }
+  </style>
+      </head>
+      <body>
+      <div class="card">
+      <div class="header">
+          <div class="first"></div>
+          <div class="middle"></div>
+          <div class="last"></div>
+      </div>
+      <div class="content">
+          <div class="logo"></div>
+          <div class="greeting-from">
+              <span class="greeting">Greeting</span>
+              <span class="from">From</span> <br>
+              <span class="web-crafts">American Web Crafts</span>
           </div>
-        </div>
-        </body>
-      </html>
+          <div class="middle-line-div">
+              <div class="first"></div>
+              <div class="middle-line"></div>
+              <div class="last"></div>
+          </div>
+          <div class="">
+              <span class="dear">Dear,</span> <span class="name">${name}</span>
+          </div>
+          <p>
+              Rest assured that a highly dedicated and experienced representative from our team is committed to
+              reaching out to you shortly,
+              utilizing either your provided phone number or email address, and will diligently ensure that you
+              receive the prompt and
+              personalized assistance you deserve.
+          </p>
+          <h2>Thank You</h2>
+          <div class="best-regards">
+              <sapn>Best regards,<br>American Web Crafts</sapn>
+          </div>
+      </div>
+      <div class="footer">
+          <div class="first"></div>
+          <div class="footer-middle"></div>
+          <div class="last"></div>
+      </div>
+  </div>
+      </body>
+    </html>
     `,
     };
 
@@ -552,80 +828,149 @@ app.post("/packages", async (req, res) => {
       subject: "Thank You for Contacting American Web Crafts",
       html: `
       <html>
-        <head>
-          <style>
-            .card {
-              border: 0px solid #9d0208;
-              max-width: 400px;
-              background-color: #fff;
-              border-radius: 8px;
-              box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-              background: linear-gradient(to top, #601417, #9d0208);
-            }
-            .header {
-                background: #161617;
-                text-align: center;
-                color: #fff;
-                padding: 15px;
-                font-size: 20px;
-              }
-            .dear {
-              color: #fff;
-              padding-right: 20px;
-              padding-left: 20px;
-              margin-top: 20px;
-              font-size: 22px;
-            }
-            .name {
-              color: #fff;
-              padding-right: 20px;
-              padding-left: 20px;
-              font-size: 20px;
-            }
-  
-            h2 {
-              color: #fff;
-              padding-right: 20px;
-              padding-left: 20px;
-              text-align:right;
-            }
-  
-            p {
-              line-height: 1.6;
-              padding-right: 20px;
-              padding-left: 20px;
-              font-size: 17px;
-              color: #fff;
-            }
-  
-            .footer {
-              background: #161617;
-              padding: 10px;
-              margin-top: 20px;
-              text-align: center;
-              color: #fff;
-              font-size: 16px;
-            }
-          </style>
-        </head>
-        <body>
-        <div class="card">
-        <div class="back_bg"></div>
-        <div class="header">Greeting from American Web Crafts</div>
-          <div class="dear">Dear,</div>
-          <div class="name">${name}</div>
-          <p>
-          Rest assured that a highly dedicated and experienced representative from our team is committed to reaching out to you shortly, 
-          utilizing either your provided phone number or email address, and will diligently ensure that you receive the prompt and 
-          personalized assistance you deserve.
-          </p>
-          <h2>Thank You 😇</h2>
-          <div class="footer">
-            <p>Best regards,<br>American Web Crafts</p>
+      <head>
+      <style>
+      .card {
+          border: 2px solid #9b1d21;
+          max-width: 500px;
+          background-color: #fff;
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          text-align: center;
+      }
+
+      .header,
+      .footer {
+          display: flex;
+      }
+
+      .first,
+      .last {
+          width: 100%;
+      }
+
+      .middle {
+          width: 250px;
+          height: 20px;
+          background: #9b1d21;
+      }
+
+      .content {
+          padding: 25px;
+      }
+
+      .logo {
+          margin: 2rem 0 2rem 0rem;
+      }
+
+      .greeting {
+          font-size: 46px;
+          color: #9b1d21;
+          font-weight: bold;
+      }
+
+      .from {
+          font-size: 46px;
+          color: #000000;
+          font-weight: bold;
+      }
+
+      .web-crafts {
+          font-size: 25px;
+          color: #000000;
+          font-weight: bold;
+      }
+
+      .middle-line-div {
+          display: flex;
+      }
+
+      .middle-line {
+          width: 350px;
+          height: 8px;
+          background: #9b1d21;
+          margin: 1.5rem 0 1.5rem 0;
+      }
+      .dear {
+          color: #b95857;
+          font-size: 22px;
+          font-weight: bold;
+      }
+
+      .name {
+          color: #424242;
+          font-size: 22px;
+          font-weight: bold;
+      }
+
+      p {
+          color: #555555;
+          font-size: 18px;
+      }
+
+      h2 {
+          font-size: 25px;
+          color: #9d0208;
+          font-weight: bold;
+      }
+
+      .best-regards {
+          color: #2f2f2f;
+          font-size: 20px;
+          font-weight: bold;
+      }
+
+      .footer-middle {
+          width: 250px;
+          height: 50px;
+          display: flex;
+          justify-content: center;
+          background: #9b1d21;
+      }
+  </style>
+      </head>
+      <body>
+      <div class="card">
+      <div class="header">
+          <div class="first"></div>
+          <div class="middle"></div>
+          <div class="last"></div>
+      </div>
+      <div class="content">
+          <div class="logo"></div>
+          <div class="greeting-from">
+              <span class="greeting">Greeting</span>
+              <span class="from">From</span> <br>
+              <span class="web-crafts">American Web Crafts</span>
           </div>
-        </div>
-        </body>
-      </html>
+          <div class="middle-line-div">
+              <div class="first"></div>
+              <div class="middle-line"></div>
+              <div class="last"></div>
+          </div>
+          <div class="">
+              <span class="dear">Dear,</span> <span class="name">${name}</span>
+          </div>
+          <p>
+              Rest assured that a highly dedicated and experienced representative from our team is committed to
+              reaching out to you shortly,
+              utilizing either your provided phone number or email address, and will diligently ensure that you
+              receive the prompt and
+              personalized assistance you deserve.
+          </p>
+          <h2>Thank You</h2>
+          <div class="best-regards">
+              <sapn>Best regards,<br>American Web Crafts</sapn>
+          </div>
+      </div>
+      <div class="footer">
+          <div class="first"></div>
+          <div class="footer-middle"></div>
+          <div class="last"></div>
+      </div>
+  </div>
+      </body>
+    </html>
     `,
     };
 
@@ -680,80 +1025,149 @@ app.post("/contact-us", async (req, res) => {
       subject: "Thank You for Contacting American Web Crafts",
       html: `
       <html>
-        <head>
-          <style>
-            .card {
-              border: 0px solid #9d0208;
-              max-width: 400px;
-              background-color: #fff;
-              border-radius: 8px;
-              box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-              background: linear-gradient(to top, #601417, #9d0208);
-            }
-            .header {
-                background: #161617;
-                text-align: center;
-                color: #fff;
-                padding: 15px;
-                font-size: 20px;
-              }
-            .dear {
-              color: #fff;
-              padding-right: 20px;
-              padding-left: 20px;
-              margin-top: 20px;
-              font-size: 22px;
-            }
-            .name {
-              color: #fff;
-              padding-right: 20px;
-              padding-left: 20px;
-              font-size: 20px;
-            }
-  
-            h2 {
-              color: #fff;
-              padding-right: 20px;
-              padding-left: 20px;
-              text-align:right;
-            }
-  
-            p {
-              line-height: 1.6;
-              padding-right: 20px;
-              padding-left: 20px;
-              font-size: 17px;
-              color: #fff;
-            }
-  
-            .footer {
-              background: #161617;
-              padding: 10px;
-              margin-top: 20px;
-              text-align: center;
-              color: #fff;
-              font-size: 16px;
-            }
-          </style>
-        </head>
-        <body>
-        <div class="card">
-        <div class="back_bg"></div>
-        <div class="header">Greeting from American Web Crafts</div>
-          <div class="dear">Dear,</div>
-          <div class="name">${name}</div>
-          <p>
-          Rest assured that a highly dedicated and experienced representative from our team is committed to reaching out to you shortly, 
-          utilizing either your provided phone number or email address, and will diligently ensure that you receive the prompt and 
-          personalized assistance you deserve.
-          </p>
-          <h2>Thank You 😇</h2>
-          <div class="footer">
-            <p>Best regards,<br>American Web Crafts</p>
+      <head>
+      <style>
+      .card {
+          border: 2px solid #9b1d21;
+          max-width: 500px;
+          background-color: #fff;
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          text-align: center;
+      }
+
+      .header,
+      .footer {
+          display: flex;
+      }
+
+      .first,
+      .last {
+          width: 100%;
+      }
+
+      .middle {
+          width: 250px;
+          height: 20px;
+          background: #9b1d21;
+      }
+
+      .content {
+          padding: 25px;
+      }
+
+      .logo {
+          margin: 2rem 0 2rem 0rem;
+      }
+
+      .greeting {
+          font-size: 46px;
+          color: #9b1d21;
+          font-weight: bold;
+      }
+
+      .from {
+          font-size: 46px;
+          color: #000000;
+          font-weight: bold;
+      }
+
+      .web-crafts {
+          font-size: 25px;
+          color: #000000;
+          font-weight: bold;
+      }
+
+      .middle-line-div {
+          display: flex;
+      }
+
+      .middle-line {
+          width: 350px;
+          height: 8px;
+          background: #9b1d21;
+          margin: 1.5rem 0 1.5rem 0;
+      }
+      .dear {
+          color: #b95857;
+          font-size: 22px;
+          font-weight: bold;
+      }
+
+      .name {
+          color: #424242;
+          font-size: 22px;
+          font-weight: bold;
+      }
+
+      p {
+          color: #555555;
+          font-size: 18px;
+      }
+
+      h2 {
+          font-size: 25px;
+          color: #9d0208;
+          font-weight: bold;
+      }
+
+      .best-regards {
+          color: #2f2f2f;
+          font-size: 20px;
+          font-weight: bold;
+      }
+
+      .footer-middle {
+          width: 250px;
+          height: 50px;
+          display: flex;
+          justify-content: center;
+          background: #9b1d21;
+      }
+  </style>
+      </head>
+      <body>
+      <div class="card">
+      <div class="header">
+          <div class="first"></div>
+          <div class="middle"></div>
+          <div class="last"></div>
+      </div>
+      <div class="content">
+          <div class="logo"></div>
+          <div class="greeting-from">
+              <span class="greeting">Greeting</span>
+              <span class="from">From</span> <br>
+              <span class="web-crafts">American Web Crafts</span>
           </div>
-        </div>
-        </body>
-      </html>
+          <div class="middle-line-div">
+              <div class="first"></div>
+              <div class="middle-line"></div>
+              <div class="last"></div>
+          </div>
+          <div class="">
+              <span class="dear">Dear,</span> <span class="name">${name}</span>
+          </div>
+          <p>
+              Rest assured that a highly dedicated and experienced representative from our team is committed to
+              reaching out to you shortly,
+              utilizing either your provided phone number or email address, and will diligently ensure that you
+              receive the prompt and
+              personalized assistance you deserve.
+          </p>
+          <h2>Thank You</h2>
+          <div class="best-regards">
+              <sapn>Best regards,<br>American Web Crafts</sapn>
+          </div>
+      </div>
+      <div class="footer">
+          <div class="first"></div>
+          <div class="footer-middle"></div>
+          <div class="last"></div>
+      </div>
+  </div>
+      </body>
+    </html>
     `,
     };
 

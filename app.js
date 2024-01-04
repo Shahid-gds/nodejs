@@ -790,7 +790,7 @@ app.post("/order-now", async (req, res) => {
 });
 app.post("/packages", async (req, res) => {
   try {
-    const { name, company, email, phone, message, logoType, logoHeading } = req.body;
+    const { name, company, email, phone, message, logoType, logoHeading, logoCategory } = req.body;
 
     // Create a nodemailer transporter with your email service credentials
     const transporter = nodemailer.createTransport({
@@ -806,7 +806,7 @@ app.post("/packages", async (req, res) => {
     const mailOptions = {
       from: "email@americanwebcraft.com",
       to: "info@americanwebcraft.com",
-      subject: `Packages || Order Now || ${logoType} ${logoHeading}`,
+      subject: `${logoCategory} || ${logoType} ${logoHeading}`,
       html: `
         <p>Name: ${name}</p>
         <p>Email: ${email}</p>

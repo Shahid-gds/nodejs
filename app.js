@@ -1,5 +1,5 @@
-const express = require("express");
 const nodemailer = require("nodemailer");
+const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 
@@ -15,11 +15,11 @@ app.post("/submit-form", async (req, res) => {
 
     // Create a nodemailer transporter with your email service credentials
     const transporter = nodemailer.createTransport({
-      host: "smtp.elasticemail.com",
+      host: "support@titan.email",
       secure: true,
       auth: {
-        user: "email@americanwebcraft.com",
-        pass: "259D56DCCB0B48789952B072ADCE6CE45922",
+        user: "jack@americanwebcraft.com",
+        pass: "awc123!@#",
       },
     });
 

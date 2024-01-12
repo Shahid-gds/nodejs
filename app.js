@@ -15,11 +15,12 @@ app.post("/submit-form", async (req, res) => {
 
     // Create a nodemailer transporter with your email service credentials
     const transporter = nodemailer.createTransport({
-      host: "support@titan.email",
+      host: "rssd7954.webaccountserver.com",
+      port: "465",
       secure: true,
       auth: {
-        user: "jack@americanwebcraft.com",
-        pass: "awc123!@#",
+        user: "email@americanwebcraft.com",
+        pass: "AWCemail123!@#",
       },
     });
 
